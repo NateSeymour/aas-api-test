@@ -18,7 +18,9 @@ jobs:
       - name: Azure Login
         uses: Azure/login@v2.2.0
         with:
-          creds: ${{ secrets.AZURE_CREDENTIAL }}
+          client-id: ${{ secrets.CLIENT_ID }}
+          tenant-id: ${{ secrets.TENANT_ID }}
+          subscription-id: ${{ secrets.SUBSCRIPTION_ID }}
 
       - name: Deploy
         uses: Azure/cli@v2
