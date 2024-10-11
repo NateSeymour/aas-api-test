@@ -16,12 +16,12 @@ jobs:
         run: npm run generate-bundle
 
       - name: Azure Login
-        uses: azure/login@2.2.0
+        uses: Azure/login@v2.2.0
         with:
           creds: ${{ secrets.AZURE_CREDENTIAL }}
 
       - name: Deploy
-        uses: azure/cli@v2
+        uses: Azure/cli@v2
         with:
           azcliversion: latest
           inlineScript: |
